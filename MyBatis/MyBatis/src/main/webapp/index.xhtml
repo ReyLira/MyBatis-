@@ -1,0 +1,28 @@
+<html 	xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:p= "http://primefaces.org/ui" 
+       xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+    <h:head> 
+        <title>Usuario</title>
+        
+    </h:head> 
+    <h:body> 
+        
+            <h:form id="miform">
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Nombre"/>
+                    <p:inputText value="#{UsuarioBean.usuario.NOMUSU}"/>
+                    <p:outputLabel value="Apellido"/>
+                    <p:inputText value="#{UsuarioBean.usuario.APEUSU}"/>
+                    <p:outputLabel value="Nivel"/>
+                    <p:inputText value="#{UsuarioBean.usuario.NIVUSU}" />
+                    <p:outputLabel value="Contraseña"/>
+                    <p:inputText value="#{UsuarioBean.usuario.PASUSU}" />
+               
+                
+            <p:commandButton value="Guardar" update="miform" actionListener="#{UsuarioC.guardar()}" update=":MostrarUsuarios:tablausu"/>
+             </p:panelGrid>
+                <p:messages closable="true" showDetail="true" showSummary="true"/>
+            </h:form>

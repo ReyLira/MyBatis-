@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <enviroments default="development">
+        <enviroment id="development" >
+            <transactionManager type="JDBC" >
+                <dataSource type="POOLED">
+                    <property name="driver"  value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+                    <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=PruebaCRAS" />
+                    <property name="username" value="sa" />
+                    <property name="password" value="joserivera123" />
+                </dataSource>
+            </transactionManager>
+        </enviroment>
+    </enviroments>
+    <mappers>
+        <mapper resource="cl/mybatis/mappers/ContactoMapper.xml"/>
+    </mappers>
+</configuration>
+
+
