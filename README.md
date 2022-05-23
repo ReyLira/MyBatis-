@@ -1,4 +1,3 @@
 # MyBatis-
 *Integrantes:*
--Jose Rivera 
--Rey Gonzalez
+G08 - Jose Rivera y Rey Gonzalez
